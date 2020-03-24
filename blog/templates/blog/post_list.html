@@ -12,15 +12,15 @@
             </div>
 
             <div>
-                <h2><a href="">My First Post</a></h2>
-                <p><b>Published</b>: 24 March 2020, 09:18 PM</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore, at optio exercitationem quas nesciunt quisquam necessitatibus harum mollitia porro veniam culpa? Voluptatem quos, odio aspernatur voluptas blanditiis quod nam?</p>
-            </div>
-
-            <div>
-                <h2><a href="">My Second Post</a></h2>
-                <p><b>Published</b>: 24 March 2020, 09:22 PM</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore, at optio exercitationem quas nesciunt quisquam necessitatibus harum mollitia porro veniam culpa? Voluptatem quos, odio aspernatur voluptas blanditiis quod nam?</p>
+                {% for post in posts %}
+                    <div>
+                        <hr>
+                        <h2><a href=""> {{ post.title }} </a></h2>
+                        <h3> {{ post.author }} </a></h3>
+                        <p> {{ post.text|linebreaksbr }}</p>
+                        <p><b>Published:</b> <u>{{ post.published_date }} </u></p>
+                    </div>
+                {% endfor %}
             </div>
         </center>
     </body>
