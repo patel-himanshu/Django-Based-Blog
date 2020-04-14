@@ -1,0 +1,1 @@
+This is a simple Django based Blog, which I made while following [Django Girls Tutorials](https://tutorial.djangogirls.org/en/).
